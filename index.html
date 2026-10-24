@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <style></style>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Opinionz" />
+        <title>Présentation - Projet Opinionz</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="bg-light-alt" style="display: block; justify-content: center; align-items: center;" class="bg-01">
+        <div style="display: block;">
+            <header class="mb-100">
+                <div class="col" style="margin-top: 20px; text-align: center; color: black;">
+                    <h1 class="display-3 mb-1"><span style="color: #000080;">Le Projet</span> <span style="color: #8D1CD5;">Opinionz</span></h1>
+                </div>
+            </header>
+            <main class="circle-container mb-100 mt-50">
+                <div class="circle-item">
+                    <img src="assets/img/partners-logo.png" alt="Image 1">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-our-partners.html" role="button">Nos Partenaires</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/ai-gear-logo.png" alt="Image 2">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-ai-perf.html" role="button">IA et Performances</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/cf-forecast-logo.png" alt="Image 3">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-cf-forecast.html" role="button">Croissance et Trésorerie</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/risks-logo.png" alt="Image 4">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-risks.html" role="button">Les Risques</a>
+                </div>
+                <div class="central-item">
+                    <!--img src="assets/img/si-icone.png" alt="Image 0" style="width: 65%;"-->
+                    <img class="logo" src="assets/img/logo-opinionz-v2.png" alt="logo Opinionz" style="width: 70%">
+                    <a class="mt-3 btn btn-primary btn-lg text-white fw-bolder flash-info" href="presentation-Opinionz-executive-summary.html" role="button">Le Projet en synthèse</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/our-team-logo.png" style="height: 80%;" alt="Image 5">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-our-team.html" role="button">L'Équipe Opinionz</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/strategy-logo.png" style="width: 35%;" alt="Image 6">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-strategy.html" role="button">Notre Stratégie</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/surveys-market-logo.png" alt="Image 7">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-sample-market.html" role="button">Le Marché des Études</a>
+                </div>
+                <div class="circle-item">
+                    <img src="assets/img/website-2-logo.png" alt="Image 8">
+                    <a class="btn btn-primary btn-lg text-white fw-bolder" href="presentation-Opinionz-website.html" role="button">Notre Site</a>
+                </div>
+            </main>
+            <footer class="footer-default">
+                <div class="container d-flex flex-column flex-md-row justify-content-around ">
+                    <span class="annexes">Annexes :</span>
+                    <a class="pb-4 pb-md-0" href="assets/enc/opinionz-cf-forecast-2025-2030.xlsx" target="_blank" id="businessPlan">Business Plan (2025-2030)</a>
+                    <a class="pb-4 pb-md-0" href="assets/enc/GreenBook_Report_2022.pdf" target="_blank">GreenBook Report</a>
+                    <a class="pb-4 pb-md-0" href="assets/enc/Contracts_Signed_2026.pdf" target="_blank">Contrats signés</a>
+                </div>
+            </footer>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const items = document.querySelectorAll('.circle-item');
+                const container = document.querySelector('.circle-container');
+                const radius = container.offsetWidth / 2 - 20; // Adjust based on container and item sizes
+                const angleStep = (2 * Math.PI) / items.length;
+
+                items.forEach((item, index) => {
+                    const angle = index * angleStep;
+                    const x = container.offsetWidth / 2 + radius * Math.cos(angle) - item.offsetWidth / 2;
+                    const y = container.offsetHeight / 2 + radius * Math.sin(angle) - item.offsetHeight / 2;
+                    item.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+        </script>
+    </body>
+</html>
